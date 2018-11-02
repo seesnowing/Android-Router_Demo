@@ -2,6 +2,7 @@ package test.app.com.apptest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         jumpId=findViewById(R.id.jumpId);
         jumpId.setOnClickListener(this);
+    }
+
+    //test code
+    void  testAppCode(){
+        //#1.txt
     }
 
     //router test
