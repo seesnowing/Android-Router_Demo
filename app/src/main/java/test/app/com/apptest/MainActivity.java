@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import test.app.com.apptest.strategy_study.ImageLoadUtils;
 
 import com.chenenyu.router.Router;
 import com.chenenyu.router.annotation.Route;
@@ -13,6 +15,7 @@ import com.chenenyu.router.annotation.Route;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView jumpId;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +23,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         jumpId=findViewById(R.id.jumpId);
         jumpId.setOnClickListener(this);
+        imageView=findViewById(R.id.imageView);
     }
 
     //test code
     void  testAppCode(){
         //#2.txt
+    }
+
+    //loadImageView
+    void loadImage(){
+        String url="http://pic19.nipic.com/20120210/7827303_221233267358_2.jpg";
+        ImageLoadUtils.getInstance().loadImageView(this,url,imageView);
     }
 
     //router test
@@ -36,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v.getId()==R.id.jumpId){
             routerJump();
+            loadImage();
         }
     }
 }
