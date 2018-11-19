@@ -14,8 +14,9 @@ public class ImageLoadUtils {
         return instance;
     }
 
-    public void setBaseImageLoaderStrategy(BaseImageLoaderStrategy baseImageLoaderStrategy) {
+    public ImageLoadUtils setBaseImageLoaderStrategy(BaseImageLoaderStrategy baseImageLoaderStrategy) {
         this.baseImageLoaderStrategy=baseImageLoaderStrategy;
+        return this;
     }
 
     public void loadImageView(Context context, String url, ImageView imageView){

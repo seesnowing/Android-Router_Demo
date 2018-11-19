@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.chenenyu.router'
+def AAVersion = '3.2'  // 可根据需要修改版本号
 
 android {
     compileSdkVersion 28
@@ -28,7 +29,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':librarya')
     implementation project(':libraryb')
+    implementation project(':signalman')
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
 }

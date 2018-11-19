@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/librarya" />
             <option value="$PROJECT_DIR$/libraryb" />
+            <option value="$PROJECT_DIR$/signalman" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
